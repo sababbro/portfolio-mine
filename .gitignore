@@ -6,3 +6,15 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# IDE / AI Agent files
+.jetro/
+.cursor/
+.agents/
+.mcp.json
+.windsurfrules
+metadata.json
+agents.md
+AGENT.md
+CLAUDE.md
+plan.md
