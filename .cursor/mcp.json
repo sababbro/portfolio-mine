@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "jetro": {
+      "type": "stdio",
+      "command": "C:\\Users\\nofel\\.jetro\\runtime\\node-win32-x64.exe",
+      "args": [
+        "C:\\Users\\nofel\\.jetro\\mcp-server\\index.js"
+      ],
+      "env": {
+        "JET_WORKSPACE": "d:\\portfolio-mine-main",
+        "JET_API_URL": "https://api.jetro.ai",
+        "JET_JWT": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc5OTRiNGYzMTU2MzJiMjk3NzAwNmQ5M2U5NGIyYWNiZTMwNWZlNDYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vamV0cm8tY2RhZWYiLCJhdWQiOiJqZXRyby1jZGFlZiIsImF1dGhfdGltZSI6MTc3OTQ3OTA5NCwidXNlcl9pZCI6ImZuZm5tUG1KZzdZNGg2ekdUOFFiSVpHb0d2dzEiLCJzdWIiOiJmbmZubVBtSmc3WTRoNnpHVDhRYklaR29HdncxIiwiaWF0IjoxNzgwOTAyNTU4LCJleHAiOjE3ODA5MDYxNTgsImVtYWlsIjoic2FiYWJoYXNhbjI0QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInNhYmFiaGFzYW4yNEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.jAGH3rbAEtithmdOa_vGqfCV_nwsJdcgCj4iHuhageHY0MpOYojLsXRXcniSlswKARKGht7OCp0jzDRAqx8rEJqs3AP8kx20iEootG--FvXDw73t2IXd7ZSYebdCZ2o55vx1_Y-smR-DA0JiHi8iZNMGWd2fsg9apcUBto6coycWhVvVajndJfLkE3UAXr2qDbOApthKia9IkxNRpz7E6zMsCyd7qFjgPMT90lijSNPcU7daACytvkRxCqunWEhBGuvPyv02zkNOc46SGJcN3Ih89Zwkb4SllGwlVUlmzvNUsAWeHVE_fWS1z4qI6H2KYrS6LjmwJt8nDxAGDMsXPw",
+        "PATH": "C:\\Users\\nofel\\.jetro\\runtime;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\nodejs\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Tailscale\\;C:\\Program Files (x86)\\cloudflared\\;C:\\Users\\nofel\\.cargo\\bin;C:\\Users\\nofel\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\nofel\\AppData\\Local\\Python\\bin;C:\\Users\\nofel\\AppData\\Local\\Programs\\Antigravity\\bin;C:\\Users\\nofel\\AppData\\Roaming\\npm;C:\\Users\\nofel\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\mingw64\\bin;C:\\Users\\nofel\\AppData\\Local\\Programs\\Ollama;C:\\Users\\nofel\\AppData\\Local\\Microsoft\\WinGet\\Links;C:\\Program Files (x86)\\Nmap;C:\\Users\\nofel\\AppData\\Local\\Google\\Cloud SDK\\google-cloud-sdk\\bin;C:\\Users\\nofel\\.bun\\bin;D:\\IBM Bob\\bin;D:\\Microsoft VS Code\\bin;C:\\Users\\nofel\\AppData\\Local\\Programs\\Antigravity IDE\\bin;D:\\.antigravity\\Antigravity IDE\\bin"
+      }
+    }
+  }
+}

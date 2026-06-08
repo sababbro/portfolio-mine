@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'ak';
+  src: url('https://offficestud.io/fonts/ak-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ak';
+  src: url('https://offficestud.io/fonts/ak-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@theme {
+  --color-base: #111111;
+  --color-content: #ffffff;
+  --color-accent: #ffffff;
+  
+  --font-sans: 'ak', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'ak', ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-base);
+    color: var(--color-content);
+    overflow: hidden; /* Freed by loader */
+    position: relative;
+    font-family: var(--font-sans);
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.4);
+  }
+
+  @keyframes noise-anim {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+  }
+
+  /* SVG Noise Grain */
+  body::after {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    z-index: 9998;
+    background-image: url('/assets/ambient-grain.jpg');
+    background-repeat: repeat;
+    opacity: 0.15;
+    animation: noise-anim 0.2s infinite;
+  }
+
+  h1 { font-size: 32px; font-weight: 700; line-height: 1; }
+  h2 { font-size: 27px; font-weight: 700; line-height: 1; }
+  h3 { font-size: 23px; font-weight: 400; line-height: 1.2; }
+  p { font-size: 16px; font-weight: 400; line-height: 1.5; }
+
+  /* Utilities for layout */
+  .border-structural { border: 1px solid #fefefe; }
+  
+  .system-dot {
+    width: 8px;
+    height: 8px;
+    background: #00FF41;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #00FF41;
+  }
+
+  @media (pointer: fine) {
+    body.custom-cursor-active,
+    body.custom-cursor-active a,
+    body.custom-cursor-active button,
+    body.custom-cursor-active select,
+    body.custom-cursor-active label {
+      cursor: none !important;
+    }
+  }
+}
