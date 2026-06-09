@@ -12,7 +12,6 @@ import ServicesGrid from './components/ServicesGrid';
 import ProjectVault from './components/ProjectVault';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
 import FloatingActions from './components/FloatingActions';
 import SlicedProfile from './components/SlicedProfile';
 
@@ -48,7 +47,6 @@ export default function App() {
 
       {loaderComplete && (
         <SmoothScrollProvider>
-          <CustomCursor />
           <FloatingActions />
           <main className="w-full min-h-screen bg-transparent text-[#fefefe] flex flex-col items-center">
             <Hero />

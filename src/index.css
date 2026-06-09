@@ -87,13 +87,4 @@
     box-shadow: 0 0 8px #00FF41;
   }
 
-  @media (pointer: fine) {
-    body.custom-cursor-active,
-    body.custom-cursor-active a,
-    body.custom-cursor-active button,
-    body.custom-cursor-active select,
-    body.custom-cursor-active label {
-      cursor: none !important;
-    }
-  }
 }
