@@ -15,6 +15,13 @@ interface Service {
 
 const services: Service[] = [
   {
+    num: "00",
+    title: "AI Integrations",
+    desc: "MCP Servers & Custom Agent Bridges",
+    logs: ["> scaffolding MCP server...", "> exposing system APIs to LLM...", "> agent bridge connected..."],
+    tags: ['AI', 'INFRA']
+  },
+  {
     num: "01",
     title: "Custom Chatbots",
     desc: "24/7 Sales & Support Reps",
