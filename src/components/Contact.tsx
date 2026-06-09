@@ -5,7 +5,7 @@ export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
   const [showToast, setShowToast] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const name = formData.get('name');
@@ -13,17 +13,43 @@ export default function Contact() {
     const payload = formData.get('payload');
     
     setStatus('sending');
+
+    const access_key = import.meta.env.VITE_CONTACT_KEY;
     
-    // Simulate terminal processing delay for satisfaction
-    setTimeout(() => {
-      setStatus('sent');
-      setShowToast(true);
-      
-      // Native mailto integration so the form genuinely works
-      window.location.href = `mailto:sababhasan24@gmail.com?subject=New Project Brief from ${name}&body=Name / Call Sign: ${name}%0D%0AComms: ${email}%0D%0A%0D%0APayload details:%0D%0A${payload}`;
-      
-      setTimeout(() => setShowToast(false), 4000);
-    }, 1800);
+    if (!access_key) {
+      console.error("VITE_CONTACT_KEY environment variable is missing!");
+      setStatus('idle');
+      return;
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: access_key,
+          name: name,
+          email: email,
+          message: payload,
+          subject: `New Project Brief from ${name}`,
+        }),
+      });
+
+      if (response.ok) {
+        setStatus('sent');
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 4000);
+      } else {
+        console.error("Form submission failed");
+        setStatus('idle');
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus('idle');
+    }
   };
 
   return (
